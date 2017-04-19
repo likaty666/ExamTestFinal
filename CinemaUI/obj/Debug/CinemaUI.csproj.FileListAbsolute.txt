@@ -1,0 +1,242 @@
+E:\Новая папка (3)\ExamTest1\CinemaUI\obj\Debug\CinemaUI.csprojResolveAssemblyReference.cache
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\ApplicationInsights.config
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\csc.exe
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\System.Collections.Immutable.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\System.Reflection.Metadata.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\vbc.exe
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\VBCSCompiler.exe
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\roslyn\VBCSCompiler.exe.config
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\CinemaUI.dll.config
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\CinemaUI.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\CinemaUI.pdb
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Antlr3.Runtime.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Cinema.DataLayer.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Cinema.Repository.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Cinema.Service.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\EntityFramework.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\EntityFramework.SqlServer.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.DependencyCollector.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.Web.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.WindowsServer.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.ApplicationInsights.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Google.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Web.Infrastructure.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Newtonsoft.Json.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Ninject.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Ninject.Web.Common.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Ninject.Web.Mvc.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Owin.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Helpers.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Mvc.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Optimization.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Razor.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.WebPages.Deployment.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.WebPages.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.WebPages.Razor.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\WebActivatorEx.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\WebGrease.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Cinema.DataLayer.pdb
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Cinema.Repository.pdb
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Cinema.Service.pdb
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.DependencyCollector.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.Web.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AI.WindowsServer.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.ApplicationInsights.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Ninject.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Ninject.Web.Common.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Ninject.Web.Mvc.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Helpers.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Mvc.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Optimization.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.Razor.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.WebPages.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.WebPages.Deployment.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\System.Web.WebPages.Razor.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Antlr3.Runtime.pdb
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Newtonsoft.Json.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\EntityFramework.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\EntityFramework.SqlServer.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Google.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Новая папка (3)\ExamTest1\CinemaUI\obj\Debug\CinemaUI.dll
+E:\Новая папка (3)\ExamTest1\CinemaUI\obj\Debug\CinemaUI.pdb
+D:\ExamTest1\CinemaUI\bin\ApplicationInsights.config
+D:\ExamTest1\CinemaUI\bin\roslyn\csc.exe
+D:\ExamTest1\CinemaUI\bin\roslyn\csc.exe.config
+D:\ExamTest1\CinemaUI\bin\roslyn\csc.rsp
+D:\ExamTest1\CinemaUI\bin\roslyn\csi.exe
+D:\ExamTest1\CinemaUI\bin\roslyn\csi.rsp
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ExamTest1\CinemaUI\bin\roslyn\System.AppContext.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\System.Collections.Immutable.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\System.IO.FileSystem.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\System.Reflection.Metadata.dll
+D:\ExamTest1\CinemaUI\bin\roslyn\vbc.exe
+D:\ExamTest1\CinemaUI\bin\roslyn\vbc.exe.config
+D:\ExamTest1\CinemaUI\bin\roslyn\vbc.rsp
+D:\ExamTest1\CinemaUI\bin\roslyn\VBCSCompiler.exe
+D:\ExamTest1\CinemaUI\bin\roslyn\VBCSCompiler.exe.config
+D:\ExamTest1\CinemaUI\bin\CinemaUI.dll.config
+D:\ExamTest1\CinemaUI\bin\CinemaUI.dll
+D:\ExamTest1\CinemaUI\bin\CinemaUI.pdb
+D:\ExamTest1\CinemaUI\bin\Antlr3.Runtime.dll
+D:\ExamTest1\CinemaUI\bin\Cinema.DataLayer.dll
+D:\ExamTest1\CinemaUI\bin\Cinema.Repository.dll
+D:\ExamTest1\CinemaUI\bin\Cinema.Service.dll
+D:\ExamTest1\CinemaUI\bin\EntityFramework.dll
+D:\ExamTest1\CinemaUI\bin\EntityFramework.SqlServer.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.Agent.Intercept.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.DependencyCollector.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.Web.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.WindowsServer.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.ApplicationInsights.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.DataProtection.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Session.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Caching.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Options.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Primitives.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Google.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ExamTest1\CinemaUI\bin\Microsoft.Web.Infrastructure.dll
+D:\ExamTest1\CinemaUI\bin\Newtonsoft.Json.dll
+D:\ExamTest1\CinemaUI\bin\Ninject.dll
+D:\ExamTest1\CinemaUI\bin\Ninject.Web.Common.dll
+D:\ExamTest1\CinemaUI\bin\Ninject.Web.Mvc.dll
+D:\ExamTest1\CinemaUI\bin\Owin.dll
+D:\ExamTest1\CinemaUI\bin\System.Text.Encodings.Web.dll
+D:\ExamTest1\CinemaUI\bin\System.Web.Helpers.dll
+D:\ExamTest1\CinemaUI\bin\System.Web.Mvc.dll
+D:\ExamTest1\CinemaUI\bin\System.Web.Optimization.dll
+D:\ExamTest1\CinemaUI\bin\System.Web.Razor.dll
+D:\ExamTest1\CinemaUI\bin\System.Web.WebPages.Deployment.dll
+D:\ExamTest1\CinemaUI\bin\System.Web.WebPages.dll
+D:\ExamTest1\CinemaUI\bin\System.Web.WebPages.Razor.dll
+D:\ExamTest1\CinemaUI\bin\WebActivatorEx.dll
+D:\ExamTest1\CinemaUI\bin\WebGrease.dll
+D:\ExamTest1\CinemaUI\bin\Cinema.DataLayer.pdb
+D:\ExamTest1\CinemaUI\bin\Cinema.Repository.pdb
+D:\ExamTest1\CinemaUI\bin\Cinema.Service.pdb
+D:\ExamTest1\CinemaUI\bin\Antlr3.Runtime.pdb
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.DependencyCollector.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.Web.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AI.WindowsServer.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.ApplicationInsights.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.DataProtection.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNetCore.Session.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Caching.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Options.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Extensions.Primitives.xml
+D:\ExamTest1\CinemaUI\bin\Newtonsoft.Json.xml
+D:\ExamTest1\CinemaUI\bin\Ninject.xml
+D:\ExamTest1\CinemaUI\bin\Ninject.Web.Common.xml
+D:\ExamTest1\CinemaUI\bin\Ninject.Web.Mvc.xml
+D:\ExamTest1\CinemaUI\bin\System.Text.Encodings.Web.xml
+D:\ExamTest1\CinemaUI\bin\System.Web.Helpers.xml
+D:\ExamTest1\CinemaUI\bin\System.Web.Mvc.xml
+D:\ExamTest1\CinemaUI\bin\System.Web.Optimization.xml
+D:\ExamTest1\CinemaUI\bin\System.Web.Razor.xml
+D:\ExamTest1\CinemaUI\bin\System.Web.WebPages.xml
+D:\ExamTest1\CinemaUI\bin\System.Web.WebPages.Deployment.xml
+D:\ExamTest1\CinemaUI\bin\System.Web.WebPages.Razor.xml
+D:\ExamTest1\CinemaUI\bin\EntityFramework.xml
+D:\ExamTest1\CinemaUI\bin\EntityFramework.SqlServer.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Google.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ExamTest1\CinemaUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ExamTest1\CinemaUI\obj\Debug\CinemaUI.csprojResolveAssemblyReference.cache
+D:\ExamTest1\CinemaUI\obj\Debug\CinemaUI.dll
+D:\ExamTest1\CinemaUI\obj\Debug\CinemaUI.pdb
+D:\ExamTest1\CinemaUI\bin\RestSharp.dll
+D:\ExamTest1\CinemaUI\bin\RestSharp.xml

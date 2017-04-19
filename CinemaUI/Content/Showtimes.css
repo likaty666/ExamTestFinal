@@ -1,0 +1,38 @@
+﻿body {
+    font-family:'Comic Sans MS';
+    color:lightslategray;
+    font-size:medium;
+}
+
+.showtimeTable tr th{
+   text-align:center;
+}
+.showtimeTable {
+    margin-top:65px;
+    margin-bottom:95px;
+   margin-left:0;
+   
+}
+.showtimeTable tr{
+     padding-top:30px;
+     margin-top:35px;
+   
+}
+.showtimeTable tr td{
+   text-align:center;
+   padding:5px;
+}
+.seans {
+   background: -webkit-linear-gradient(#abbaab, #ffffff);
+
+}
+.datesLine {
+     border-bottom: 1px  dotted #000066 ;
+      font: 13px 'Open Sans',Arial,sans-serif;
+}
+table {
+    color:white;
+    font: 13px 'Open Sans',Arial,sans-serif;
+    margin:30px;
+   
+}

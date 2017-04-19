@@ -1,0 +1,10 @@
+﻿body {
+}
+.my_nav{
+    font-size:24px;
+}
+.logo{
+        position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+}

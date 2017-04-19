@@ -1,0 +1,275 @@
+﻿@model IEnumerable<Cinema.Models.ViewModelSess>
+<link href="~/Content/Seats2.css" rel="stylesheet" />
+<link href="~/Scripts/Seats2.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Seat";
+    var count = 0;
+    var s = 0;
+    var row = 0;
+    var col = 0;
+    var c = 1;
+    var middle = 0;
+    var ids2 = ViewBag.ids;
+    var ses_id = Model.First().ses_id;
+    TimeSpan res = TimeSpan.FromMinutes((double)Model.First().time);
+    var tt = res.ToString("hh':'mm");
+    DateTime res2 = Model.First().sesDate;
+    string date = res2.ToString("m");
+    var user2 = ViewBag.Userr;
+    var mUser = User.Identity.IsAuthenticated;
+}
+
+
+
+<h1 class="title">@ViewBag.MovieTitle</h1>
+<h3 class="date"> @date @tt </h3>
+<body >
+  <div class="seats">
+    @{
+
+        count = Model.First().seats;
+        if (count >= 100)
+        {
+            row = count / 10;
+            if (count % 10 > 0)
+            {
+                row += 1;
+            }
+        }
+        else {
+            row = count / 5;
+            if (count % 5 > 0)
+            {
+                row += 1;
+            }
+        }
+
+        col = count / row;
+        middle = count / 13;
+        c = count;
+
+    }
+      <div id="messagePanel" class="messagePanel">
+          @if (count == 100) {
+              s = 9;
+          }
+           @if (count == 52) {
+               s = 0;
+           }
+          @if (count == 150)
+          {
+              s = 7;
+          }
+          @for (var i = 0; i < count; i++)
+          {
+              if (c == count - 13)
+              {
+
+                  <br /><br /><br /><br />
+              }
+              if (c == s)
+              {
+                  if (s == 0)
+                  {
+                  }
+                  if (s == 7)
+                  {
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                  }
+                  else {
+                  <div class="placeholder"></div>
+                <div class="placeholder"></div>
+                  }
+              }
+              <div class="seat available" id="@c">@c</div>
+              c--;
+
+             
+
+          }
+
+      </div>
+    </div>
+    <button class="scrn" disabled>Screen</button>
+    <div class="btnS">
+        <button class="btn-primary cart" style="width:169px">Buy tickets</button>
+        <div id="messagePanel" class="messagePanel">
+
+        </div>
+
+    </div>
+</body>
+@section scripts{
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.1.js"></script>
+<script src="/signalR/hubs"></script>
+
+<script>
+    var userId;
+    var tempId;
+    var anotherId=0;
+    var ses_id=@ses_id;
+    var ids2=@ids2;
+    var  seatsSignalr=new Array();
+    var myHub=$.connection.planeHub;
+    var tempSes;
+    $.connection.hub.logging=true;
+
+    $(function(){
+
+        window.hubReady=$.connection.hub.start();
+
+    });
+    $.connection.hub.start().done(function(){
+        myHub.server.createUser();
+        myHub.server.populateSeatData();
+        anotherId++;
+    });
+
+    myHub.client.createUser = function (message) {
+        userId = message;
+
+    };
+
+    myHub.client.populateSeatData = function (message) {
+        var parsedSeatsData = JSON.parse(message);
+        if(tempSes==ids2){
+            $.each(parsedSeatsData, function (index, value) {
+              //  $("#"+value.seatnumber).addClass("selected");
+                //setCookie(ses_id+"."+value.seatnumber,value.seatnumber,1);
+            });
+        }
+
+
+    };
+    myHub.client.deleteSeat=function(message){
+        var parsedSeatData = JSON.parse(message);
+        tempId=parsedSeatData.aspid;
+        tempSes=parsedSeatData.sessid;
+        if(tempSes==ids2){
+            $("#"+parsedSeatData.seatnumber).removeClass("selected");
+            $("#"+parsedSeatData.seatnumber).addClass("available");
+        }
+    }
+    // Client method to broadcast the message as user selected the seat
+    myHub.client.selectSeat = function (message) {
+        var parsedSeatData = JSON.parse(message);
+        tempId=parsedSeatData.aspid;
+        tempSes=parsedSeatData.sessid;
+        if(tempSes==ids2){
+            $("#"+parsedSeatData.seatnumber).addClass("selected");
+        }else{
+
+          // var smth= getCookie("ses"+ids2+"."+parsedSeatData.seatnumber);
+          // setCookie("ses"+ids2+"."+parsedSeatData.seatnumber,smth,1);
+        }
+    };
+
+
+    $(function(){
+        var length=@count;
+        var seat;
+        var booked="";
+        for(var x=0;x<length;x++){
+            booked=getCookie("ses"+ids2+"."+x);
+            if(booked!=""){
+                if(  $("#"+x).hasClass("available")){
+                    $("#"+x).removeClass("available");
+                    $("#"+x).addClass("selected");
+                }
+            }
+        }
+        var arr=@Html.Raw(Json.Encode(ViewBag.Booked));
+
+        for(var x=0;x<arr.length;x++){
+
+            if(  $("#"+arr[x]).hasClass("available")){
+                $("#"+arr[x]).removeClass("available");
+                $("#"+arr[x]).addClass("booked");
+            }
+        }
+
+        var count = 0;
+        $(function () {
+            $('.seat').on('click', function () {
+                var temp=getCookie("ses"+ids2+"."+$(this).attr("id"));
+                if ($(this).hasClass("selected") && userId==temp) {
+                    $(this).removeClass("selected");
+                    $(this).addClass("available");
+                    setCookie("ses"+ids2+"."+$(this).attr("id"),"",-1);
+                    myHub.server.deleteSeat(userId, $(this).attr("id"),ids2,userId.toString());
+
+                    count--;
+                } else if ($(this).hasClass('booked')){
+                    alert('This seat is already booked');
+                }else if($(this).hasClass("selected")){
+                    alert('This seat is already reserved');
+                }
+                else {
+                    $(this).addClass("selected");
+                    setCookie("ses"+ids2+"."+ $(this).attr("id"),userId,15);
+                    count++;
+                    myHub.server.selectSeat(userId, $(this).attr("id"),ids2,userId.toString());
+
+                }
+            });
+
+            $('.seat').mouseenter(function () {
+                $(this).addClass("hovering");
+
+                $('.seat').mouseleave(function () {
+                    $(this).removeClass("hovering");
+
+                });
+            });
+        });
+
+        $('.cart').click(function () {
+
+          
+            var ids = $(".selected").map(function (i, el) { return "id[" + i + "]=" + $(el).attr('id') }).toArray();
+
+          //  alert("id["+ids.length+"]="+ses_id);
+            ids.push("id["+ids.length+"]="+ses_id);
+            window.location = '/Film/Cart/?' + ids.join("&");
+
+             });
+    });
+    function SetSession(name,value)
+    {
+        '<%Session["'+name+'"] = "' + value + '"; %>';
+    }
+    function GetSession(name)
+    {
+
+        return name = '<%= Session["'+name+'"] %>';
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+
+    }
+    function setCookie(cname, cvalue, exmin) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exmin*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+
+    }
+
+</script>
+    
+    }

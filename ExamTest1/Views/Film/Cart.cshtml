@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ExamTest1.Models.ViewModelTicket>
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+<h2>Cart</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hall)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sessionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hall)
+        </td>
+        <td>
+            @{int tt = (int)(item.time);
+                TimeSpan res = TimeSpan.FromMinutes(tt); var temp = res.ToString("hh':'mm");}
+           @temp
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sessionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seat)
+        </td>
+        <td>
+          
+            @Html.ActionLink("Delete", "Delete", new { id=item.ticket_id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+
+    @using (Html.BeginForm("Cart", "Film", FormMethod.Post))
+    {
+        <button name="Send" type="submit" value="Send" class="btn btn-default">Order</button>
+    }
+</div>

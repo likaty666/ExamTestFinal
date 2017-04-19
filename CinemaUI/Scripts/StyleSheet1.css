@@ -1,0 +1,26 @@
+﻿
+.bannerTitle {
+    position: absolute;
+    top: 90%;
+    left:0;
+    width:100%;
+}
+.bannerTitle span {
+    color:white;
+    font:bold;
+    font-size: 35px;
+    letter-spacing:-1px;
+    background:rgb(0,0,0);
+    background:rgba(0,0,0,0.7);
+    padding:10px;    
+    
+}
+.sesTime{
+    color:white;
+    font:bold;
+    font-size: 15px;
+}
+.onScreens {
+    color:white;
+
+}

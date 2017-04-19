@@ -1,0 +1,133 @@
+﻿@model IEnumerable<ExamTest1.Models.ViewModelFilm>
+
+@{
+    ViewBag.Title = "Index";
+    List<DateTime> ld = new List<DateTime>();
+}
+
+<link href="~/Scripts/glide.core.css" rel="stylesheet" />
+<link href="~/Scripts/glide.theme.css" rel="stylesheet" />
+<link href="~/Scripts/StyleSheet1.css" rel="stylesheet" />
+<h2>Index</h2>
+@if (TempData["notice"] != null)
+{
+   
+    <p>@TempData["notice"]</p>
+}
+<body>
+    <div id="Glide" class="glide"  >
+
+        <div class="glide__arrows">
+            <button class="glide__arrow prev" data-glide-dir="<"><img src="~/img/left.png" /></button>
+            <button class="glide__arrow next" data-glide-dir=">"><img src="~/img/right.png" /></button>
+        </div>
+        <div class="glide__wrapper">
+          
+
+            <ul class="glide__track">
+
+                @foreach (var item in Model)
+            {
+                string mylink = "/Film/Show/" + item.film_id;
+                   
+
+                        if (item.pathPhoto != null)
+                        {
+                            if (item.isMain == true)
+                            {
+                                <li class="glide__slide">
+                                    <div class="image">
+                                        <a href="@mylink" title="Main photo">
+                                            <img class="bannerImg" src="@item.pathPhoto" width="450" height="750" />
+                                            <h4 class="bannerTitle"><span>@Html.DisplayFor(p => item.title)</span>  </h4>
+                                         </a>
+                                        
+                                        <p class="clip">
+                                           
+                                        </p>
+                                    </div>
+                                </li>
+                            }
+                                   
+                                    }
+                               
+                            }
+            </ul>
+        </div>
+
+        <div class="glide__bullets"></div>
+
+    </div>
+    <div >
+@foreach (var item in Model)
+{
+    <table width="500" border="0" cellpadding="5">
+        @if (item.isMain == true)
+        {
+        <tr>
+
+            <td align="center" valign="center">
+
+                <img class="smallImg" src="@item.pathPhoto" width="50" height="65" />
+            </td>
+            @foreach (var ses in ViewBag.Ses)
+            {
+                if (ses.film_id == item.film_id)
+                {
+                    {ld.Add(ses.sesDate);}
+                }
+            }
+            @{ var uniqueDate = new HashSet<DateTime>(ld);ld.Clear();}
+            @foreach (var dat in uniqueDate)
+            {
+                
+                    <td align="center" valign="center">
+                        @{var str = dat.ToString("MM/dd/yyyy"); }
+
+                        <p class="sesTime"> @str </p>
+                    </td>
+                    foreach (var ses in ViewBag.Ses)
+                    {
+                        if (dat == ses.sesDate)
+                        {
+                              
+                                  <td>
+                                      @{ TimeSpan res = TimeSpan.FromMinutes(ses.timeIsh); var tt = res.ToString("hh':'mm");}
+                                    <button value="@tt" id="@ses.ses_id" onclick="sessionStorage.id='@ses.ses_id'" class="btn btn-primary seans">@tt</button> 
+                                  </td>  
+                                            }
+                                        }
+                                    }
+           
+
+
+        </tr>
+        }
+    </table>
+}
+    </div>
+</body>
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/glide.js"></script>
+
+<script>
+   
+        $("#Glide").glide({
+            index: 3,
+
+            paddings:360,
+           
+            type: "carousel",
+            keyboard: true,
+
+
+        });
+        $(function () {
+            $(".seans").click(function (event) {
+           
+                ses_id = $(this).attr('id');
+                window.location = '/Film/Seat/?ids=' + ses_id;
+            });
+        });
+</script>
+

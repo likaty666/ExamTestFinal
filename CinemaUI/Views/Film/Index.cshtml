@@ -1,0 +1,132 @@
+﻿@model IEnumerable<Cinema.Models.ViewModelFilm>
+
+@{
+    ViewBag.Title = "Index";
+    var flag = false;
+    List<DateTime> ld = new List<DateTime>();
+}
+
+<link href="~/Content/carou.css" rel="stylesheet" />
+
+@if (TempData["notice"] != null)
+{
+
+    <p>@TempData["notice"]</p>
+}
+<body style="width:100%;margin-top:0px">
+    <div class="containerMy">
+        <div class="slider">
+            <ul id="slides">
+                @foreach (var item in Model)
+                {
+                    string mylink = "/Film/Show/" + item.film_id;
+                    if (item.pathPhoto != null)
+                    {
+                        if (item.isMain == true && (DateTime.Now.CompareTo(item.BeginDate)) > 0)
+                        {
+                            if (!flag)
+                            {
+                                <li class="slide showing">
+                                    <a href="@mylink" title="Main photo">
+                                        <img src="@item.pathPhoto" />
+                                        <div class="content">@Html.DisplayFor(p => item.title)</div>
+                                    </a>
+                                </li>
+                                flag = true;
+                            }
+                            else
+                            {
+                                <li class="slide ">
+                                    <a href="@mylink" title="Main photo">
+                                        <img src="@item.pathPhoto" />
+                                        <div class="content">@Html.DisplayFor(p => item.title)</div>
+                                    </a>
+                                </li>
+                            }
+                        }
+                    }
+                }
+            </ul>
+            <button class="prev" id="previous"><img src="~/img/left.png" /></button>
+            <button class="next" id="next"><img src="~/img/right.png" /></button>
+        </div>
+        <br />
+        <h1 class="onScreens">On screens</h1>
+        <div class="catalog">
+            
+
+                @foreach (var item in Model)
+                {
+                    string mylink = "/Film/Show/" + item.film_id;
+                    int tempDays ;
+
+                    if (item.catalog == true)
+                    {
+                        if ((DateTime.Now.CompareTo(item.BeginDate)) > 0)
+                        {
+                            <div class="movie-catalog">
+                                <a href="@mylink">
+                                    <img class="smallImg" src="@item.pathPhoto" />
+                                </a>
+                                <div class="movie-catalog-info">
+                                    <div class="info-details">
+                                        <div class="info-title">@Html.DisplayFor(p => item.title)</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        }
+                }
+                }
+           
+        </div>
+        <h1 class="onScreens">Featured movies</h1>
+        <div class="catalog">
+
+
+            @foreach (var item in Model)
+            {
+                string mylink = "/Film/Show/" + item.film_id;
+
+
+                if (item.catalog == true)
+                {
+                    if ((DateTime.Now.CompareTo(item.BeginDate)) <= 0)
+                    {
+                        <div class="movie-catalog">
+                            <a href="@mylink">
+                                <img class="smallImg" src="@item.pathPhoto" />
+                                <h2 class="air-time">From:<br />@item.BeginDate.Value.Day.@item.BeginDate.Value.Month.@item.BeginDate.Value.Year</h2>
+                            </a>
+                            <div class="movie-catalog-info">
+                                <div class="info-details">
+                                    <div class="info-title">@Html.DisplayFor(p => item.title)</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    }
+                }
+            }
+
+        </div>
+
+    </div>
+     
+</body>
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/glide.js"></script>
+<script src="~/Scripts/custom.js"></script>
+<script>
+  
+    $(function () {
+        $(".seans,.smallImg").click(function (event) {
+          
+            ses_id = $(this).attr('id');
+            window.location = '/Film/Seat/?ids=' + ses_id;
+        });
+    });
+</script>
+

@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div style="margin-top:100px">
+    <h2>@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <address>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
+    @*11526 162nd Ave NE*@
+    @*<address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        </address>*@
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJJUq1c6HUEXX31PlF0mcZ4XL0YxjLO2I&language=en"></script>
+
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DropDownList("travelmode", null, new { @class = "form-control" })
+            </td>
+            <td>
+                @Html.TextBox("address", null, new { @class = "form-control", placeholder = "Enter address" })
+            </td>
+            <td>
+                <input type="button" id="go" value="GO" class="btn-primary " style="width:100px;background-color:#53cec5;margin-top:3px" />
+            </td>
+        </tr>
+    </table>
+</div>
+<div style="width:1024px;height: 500px" id="map"></div>
+<script type="text/javascript">
+    function GetTravelMode() {
+
+        var id = $('#travelmode').val();
+        var q = id.toString();
+
+        switch (q) {
+            case "1":
+                return google.maps.TravelMode.WALKING;
+            case "2":
+                return google.maps.TravelMode.BICYCLING;
+            case "3":
+                return google.maps.TravelMode.TRANSIT;
+            case "4":
+                return google.maps.TravelMode.WALKING;
+            default:
+
+        }
+        //return google.maps.TravelMode.WALKING;
+    }
+
+
+
+    function Draw(map, latlng, endPoint) {
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        var directionsService = new google.maps.DirectionsService();
+        directionsDisplay.setMap(map);
+        directionsDisplay.setOptions({ suppressMarkers: true, suppressInfoWindows: true });
+   
+        var request = {
+            origin: latlng,
+            destination: endPoint,
+            travelMode: GetTravelMode(),
+           
+            unitSystem: google.maps.UnitSystem.METRIC,
+            //waypoints: [
+            // {
+            //     location: latlng,
+            //     stopover: false
+            // }, {
+            //     location: endPoint,
+            //     stopover: true
+            // }
+            //],
+            //optimizeWaypoints: false,
+            provideRouteAlternatives: true,
+            avoidHighways: true,
+            avoidTolls: true
+        };
+        directionsService.route(request, function (result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(result);
+                var routes = result.routes;
+            }
+        });
+    }
+   
+    $(function () {
+        var latlng = new google.maps.LatLng(47.638197,-122.131379);
+        var centerlatlng = new google.maps.LatLng(47.638197, -122.131379);
+        var myOptions = {
+            zoom: 16,
+            center: centerlatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: 'cinema'
+        });
+        $("#go").click(function () {
+            var address = $("#address").val();
+            $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&sensor=false', null,
+                function (data) {
+                    var p = data.results[0].geometry.location;
+                    var endPoint = new google.maps.LatLng(p.lat, p.lng);
+                    Draw(map, latlng, endPoint);
+                });
+        });
+    });
+</script>

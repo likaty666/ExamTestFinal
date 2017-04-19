@@ -1,0 +1,41 @@
+﻿@model IEnumerable< ExamTest1.Models.ViewModelFilm>
+
+@{
+    ViewBag.Title = "Show";
+    int temp = 0;
+    int id = 0;
+}
+
+<h2>Show</h2>
+<p class="clip">
+   
+    <h4>  @Html.DisplayFor(p => Model.First().title)</h4>
+    <h4>  @Html.DisplayFor(p => Model.First().about)</h4>
+    <h4>  @Html.DisplayFor(p => Model.First().director)</h4>
+    <h4>  @Html.DisplayFor(p => Model.First().starring)</h4>
+</p>
+
+<div class="Simple">
+    @foreach (var item in Model)
+    {
+        if (temp == 0)
+        {
+            id = item.film_id;
+
+        }
+
+
+        <img class="myImage" src="@item.pathPhoto" width="350" height="350" />
+
+        temp++;
+    }
+</div>
+<br />
+<div>
+    <button type="button"
+            data-id="@id"
+            class="btn btn-primary book">
+        Booking
+    </button>
+</div>
+

@@ -1,0 +1,121 @@
+﻿@model IEnumerable<Cinema.Models.ViewModelTicket>
+
+@{
+    ViewBag.Title = "Cart";
+    decimal price = 0;
+    var ids = Model.First().ses_id;
+}
+<link href="~/Content/Cart.css" rel="stylesheet" />
+<h2>Your cart</h2>
+
+
+<body >
+    <table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                date
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.seat)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr class="ticket" id="@item.seat">
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.hall)
+                </td>
+                <td>
+                    @{int tt = (int)(item.time);
+                        TimeSpan res = TimeSpan.FromMinutes(tt); var temp = res.ToString("hh':'mm");}
+                    @temp
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.price)
+                </td>
+                <td>
+                    @{DateTime res2 = (DateTime)item.sessionDate;
+                        string date = res2.ToString("m");}
+                    @date
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.seat)
+                </td>
+                <td>
+                    <button class="btn btn-warning del">Delete</button>
+                  @*@Html.ActionLink("Delete", "Delete", new { id = item.ticket_id })*@
+                </td>
+            </tr>
+                            price += item.price;
+                        }
+     
+    </table>
+    <div class="total">
+      
+             <div id="totalPrice"></div>
+        
+    </div>
+    
+    <div>
+
+        @using (Html.BeginForm("Cart", "Film", FormMethod.Post))
+        {
+            <button name="Send" type="submit" value="Send" class="btn btn-default send">Order</button>
+        }
+    </div>
+</body>
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script>
+    var t=0;
+    var ids=@ids;
+    var price=@price;
+    document.getElementById("totalPrice").innerHTML ="Total "+price;
+    $('.table').on('click','.del',function(){
+        var ticket_id= $(this).closest("tr").attr("id");
+      //  alert(ids + ticket_id);
+        setCookie("ses" + ids + "." +ticket_id, "", -1);
+        $(this).closest("tr").remove();
+        var date = new Date();
+        date.setTime(date.getTime() + (60 * 1000));
+        setCookie("delId"+t, ticket_id, date);
+        price-=55;
+        t++;
+        document.getElementById("totalPrice").innerHTML  = "Total "+price;
+    });
+    $('.send').on('click', function () {
+        $(".ticket").each(function (index, el) {
+            setCookie("ses" + ids + "." + $(this).attr("id"), "", -1);
+            
+        });
+       
+    });
+    function setCookie(cname, cvalue, exmin) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exmin * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        // alert("done cookie");
+       // 
+    }
+
+</script>

@@ -1,0 +1,126 @@
+﻿@model IEnumerable<ExamTest1.Models.ViewModelSess>
+
+
+@{
+    ViewBag.Title = "Seat";
+    var count = 0;
+    
+    var row = 0;
+    var col = 0;
+    var c = 1;
+    var middle = 0;
+    
+    var ses_id = Model.First().ses_id;
+  
+
+
+}
+
+<h2>Seat</h2>
+
+<link href="~/Scripts/Seats.css" rel="stylesheet" />
+
+
+
+@{
+
+    count = Model.First().seats;
+    if (count >= 100)
+    {
+        row = count / 10;
+        if (count % 10 > 0) {
+            row += 1;
+        }
+    }
+    else {
+        row = count / 5;
+        if (count % 5 > 0) {
+            row += 1;
+        }
+    }
+
+    col = count / row;
+    middle = count / 13;
+    c = count;
+
+}
+<div   id="messagePanel" class="messagePanel">
+    
+   
+   @for (var i = 0; i < count; i++)
+   {
+       if (c == count - 13) {
+
+           <br /><br /><br /><br />
+       }
+    
+        <div class="seat available" id="@c">@c</div>
+           c--;
+      
+
+
+   }
+
+
+</div>
+<button class="scrn" disabled>Screen</button>
+<div class="btnS">
+    <button class="btn-success cart" style="width:169px">Send</button>
+    <div id="messagePanel" class="messagePanel">
+
+    </div>
+
+</div>
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script>
+   
+    $(function(){
+     
+        var arr=@Html.Raw(Json.Encode(ViewBag.Booked));
+     
+        for(var x=0;x<arr.length;x++){
+          
+            if(  $("#"+arr[x]).hasClass("available")){
+                $("#"+arr[x]).removeClass("available");
+                $("#"+arr[x]).addClass("booked");
+            }
+        }
+
+        var count = 0;
+        $(function () {
+            $('.seat').on('click', function () {
+
+                if ($(this).hasClass("selected")) {
+                    $(this).removeClass("selected");
+                    count--;
+                } else {
+                    $(this).addClass("selected");
+                    count++;
+                }
+
+            });
+
+            $('.seat').mouseenter(function () {
+                $(this).addClass("hovering");
+
+                $('.seat').mouseleave(function () {
+                    $(this).removeClass("hovering");
+
+                });
+            });
+        });
+
+        $('.cart').click(function () {
+            var ids = $(".selected").map(function (i, el) { return "id[" + i + "]=" + $(el).attr('id') }).toArray();
+            
+            ids.push("id["+count+"]="+@ses_id);
+            
+            window.location = '/Film/Cart/?' + ids.join("&");
+            //window.location = '/Film/Seat/?ids=' + myid;
+
+        });
+    });
+
+
+</script>

@@ -1,0 +1,42 @@
+﻿.container {
+    max-width:4000px;
+     margin: 0 ;
+    padding :0;
+    margin:0;
+    width:100%;
+}
+
+.mainPhotoWrap {
+    position: relative;
+    height: 450px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.mainPhoto {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    clip: rect( 500, 2000px, 400px, 500);
+    
+}
+ .content {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 3em;
+box-sizing: border-box;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+line-height: 3em;
+padding: 0 1em;
+font-size: 1.5em;
+
+}
+body-content {
+    margin:0PX;
+}

@@ -1,0 +1,18 @@
+﻿body {
+    margin:50px;
+        color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.total {
+    margin-top:70px;
+  position:relative;
+  left:90%;
+}
+table {
+    margin:30px;
+   
+}
+.send {
+    margin-left:20px;
+}

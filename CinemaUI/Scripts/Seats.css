@@ -1,0 +1,77 @@
+﻿body {
+   
+}
+.seats {
+    margin-top:150px;
+}
+  .messagePanel {
+       /* margin-top: 50px;
+        margin-left: 55px;
+        width: 490px;
+        height: 530px;*/
+       
+       right:4px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 550px;
+  height:  inherit;
+  
+  border-radius: 3px;
+    }
+
+    .seat {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        border: dotted 1px gray;
+        float: left;
+        border-radius: 8px;
+        color:black;
+       
+    }
+
+    .hall {
+        background-color: gainsboro;
+        width: auto;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    .available {
+        background-color: cornflowerblue;
+    }
+
+    .hovering {
+        background-color: darkgray;
+    }
+
+    .selected {
+        background-color: gray;
+    }
+       .booked {
+        background-color: palevioletred;
+        
+    }
+.seatspan {
+
+    position:absolute;
+    height:100px;
+}
+    .scrn {
+        width: 490px;
+        margin-top: 30px;
+        position: relative;
+         margin: auto;
+margin-top:100px;
+margin-bottom:50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 850px;
+  margin-left:150px;
+    }

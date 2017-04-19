@@ -1,0 +1,145 @@
+﻿@model IEnumerable< Cinema.Models.ViewModelFilm>
+<link href="~/Content/ShowFilm2.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Show";
+    int temp = 0;
+    int id = 0;
+    int count = 1;
+}
+<body>
+
+    <table class="header-table">
+        <tr>
+            <td class="img-table">
+                <h2>  @Html.DisplayFor(p => Model.First().title)</h2>
+            </td>
+            <td style=" text-align:right">
+                <button type="button"
+                        id="@id"
+                        data-id="@id"
+                        class="btn btn-primary book">
+                    Booking
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <iframe style="bottom: 150px" src="@Model.First().trailer" frameborder="0" allowfullscreen></iframe>
+
+    <br />
+    <div class="about-wrap" style="width:100%">
+        <table class="table-photo">
+            <tr>
+               
+                <td>
+                    <div class="Simple">
+
+                        @foreach (var item in Model)
+            {
+                if (temp == 0)
+                {
+                    id = item.film_id;
+
+                }
+                if (item.isMain == false)
+                {
+                                <img class="myImages" src="@item.pathPhoto" />
+                            }
+
+
+
+                            temp++;
+                        }
+                        <div class="arrow-wrap">
+                            <a class="scroll left" onclick="plusDivs(-1)" style="bottom:165px">&#10094;</a>
+                            <a class="scroll rigth" onclick="plusDivs(1)">&#10095;</a>
+                        </div>
+
+                    </div>
+                </td>
+                <td class="about">
+
+                    <h5 style="font-size: large">  @Html.DisplayFor(p => Model.First().about)</h5>
+                    <br />
+                    </p> <h5>Dirrected by:  @Html.DisplayFor(p => Model.First().director)</h5>
+                    </p> <h5>Starring:  @Html.DisplayFor(p => Model.First().starring)</h5>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br />
+      
+       
+    </div>
+
+
+   
+
+    <div class="demo-row ">
+        @foreach (var item in Model)
+        {
+            if (temp == 0)
+            {
+                id = item.film_id;
+
+            }
+            if (item.isMain == false)
+            {
+                <div class="demo-wrap">
+                    <img class="demo-img" style="height:100px" src="@item.pathPhoto" onclick="currentDiv(@count)" />
+                </div>
+                count++;
+
+            }
+
+            temp++;
+
+
+        }
+    </div>
+</body>
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script>
+    //  $('.myImage').hover(makeBigger, returnToOriginalSize);
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+   
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("myImages");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" opacity-off", "");
+        }
+        x[slideIndex-1].style.display = "block";
+        
+    }
+    function makeBigger() {
+        $(this).css({ height: '+=15%', width: '+=15%' });
+    }
+    function returnToOriginalSize() {
+        $(this).css({ height: "175px", width: "150px" });
+    }
+    $('.book').on('click', function () {
+        window.location = '/Film/FilmSessions/?idf=' + @id;
+    });
+
+</script>

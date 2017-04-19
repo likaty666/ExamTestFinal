@@ -1,0 +1,30 @@
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.dll.config
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.dll
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.pdb
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.dll
+C:\Users\Екатерина\Documents\Visual Studio 2015\Projects\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.pdb
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.dll.config
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.dll
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.pdb
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.dll
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.SqlServer.dll
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.xml
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.SqlServer.xml
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.dll
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.pdb
+E:\Новая папка (3)\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.csprojResolveAssemblyReference.cache
+D:\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.dll.config
+D:\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.dll
+D:\ExamTest1\Cinema.Repository\bin\Debug\Cinema.Repository.pdb
+D:\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.dll
+D:\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.xml
+D:\ExamTest1\Cinema.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.dll
+D:\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.pdb
+D:\ExamTest1\Cinema.Repository\obj\Debug\Cinema.Repository.csprojResolveAssemblyReference.cache

@@ -1,0 +1,134 @@
+﻿<link href="~/Content/TimeLine.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "About";
+    List<DateTime> ld = new List<DateTime>();
+    int timeTemp = 480;
+    var tt = "";
+    var flag = false;
+    var count = 1;
+    var uniqueDate = new HashSet<DateTime>();
+    var timeArr = new List<int>();
+    var ses_id = 0;
+}
+
+
+
+<body>
+    <table class="showtimeTable">
+        <tbody>
+            <tr>
+                <th style="min-width:75px">&nbsp;</th>
+                <th style="min-width:75px">&nbsp;</th>
+                @for (var x = 0; x < 16; x++)
+                {
+                    { TimeSpan res = TimeSpan.FromMinutes(timeTemp); tt = res.ToString("hh':'mm"); }
+                    <th id="@tt" style="min-width:65px;">
+                        <div>
+                            @tt
+                        </div>
+                    </th>
+                    { timeTemp += 60; }
+                }
+            </tr>
+            @foreach (var item in Model)
+            {
+                if (item.catalog == true)
+                {
+                    string mylink = "/Film/Show/" + item.film_id;
+                    <tr>
+                        <td style="width:75px">
+                            <a href="@mylink">
+                                <img class="smallImg" src="@item.pathPhoto" width="50" height="65" />
+                            </a>
+                        </td>
+                        <td><a href="@mylink">@item.title</a></td>
+                    </tr>
+                    foreach (var ses in ViewBag.Ses)
+                    {
+                        if (ses.film_id == item.film_id)
+                        {
+                            if (ses.sesDate.Year >= DateTime.Now.Year && ses.sesDate.Month >= DateTime.Now.Month && ses.sesDate.Day >= DateTime.Now.Day)
+                            {
+                                ld.Add(ses.sesDate);
+                            }
+                        }
+                    }
+                    { uniqueDate = new HashSet<DateTime>(ld); ld.Clear(); }
+                    foreach (var dat in uniqueDate)
+                    {
+                        flag = false;
+                        if (dat.Year == DateTime.Now.Year && dat.Month == DateTime.Now.Month && dat.Day == DateTime.Now.Day)
+                        {
+                            flag = true;
+                        }
+                        <tr class="datesLine">
+                            
+                            <td class="date" style="width:150px" align="left">
+                               
+                                @{var str = dat.ToString("m"); }
+                                <p class="sesTime"> @str </p>
+                            </td>
+                            @foreach (var ses in ViewBag.Ses)
+                            {
+                                if (dat == ses.sesDate && ses.film_id == item.film_id)
+                                {
+                                    timeArr.Add(ses.timeIsh);
+                                    ses_id = ses.ses_id;
+                                }
+                                count = timeArr.Count();
+                            }
+                            <td style="width:65px;"></td>
+                            @for (var x = 480; x < 1441; x += 60)
+                            {
+                                if (timeArr.Exists(y => y.Equals(x)))
+                                {
+                                    <td class="active-seans" style="width:65px">
+                                        
+                                        @{ TimeSpan res = TimeSpan.FromMinutes(x); tt = res.ToString("hh':'mm");}
+                                     @if (flag == true)
+                                     {
+                                         if (TimeSpan.FromMinutes(x) < DateTime.Now.TimeOfDay)
+                                         {
+                                            <button value="@tt" id="@ses_id" onclick="sessionStorage.id='@ses_id'" class="btn seans" disabled>@tt</button>
+
+                                         }
+                                         else {
+                                            <button value="@tt" id="@ses_id" onclick="sessionStorage.id='@ses_id'" class="btn seans">@tt</button>
+                                         }
+                                         
+                                     }
+                                     else
+                                     {
+                                        <button value="@tt" id="@ses_id" onclick="sessionStorage.id='@ses_id'" class="btn seans">@tt</button>
+                                     }
+                                        
+                                    </td>
+                                            }
+                                            else
+                                            {
+                                                <td  style="width:65px"></td>
+
+                                                }
+                                            }
+                            @{ timeArr.Clear();}
+                        </tr>
+                                        }
+
+                                    }
+                                }
+        </tbody>
+    </table>
+   
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script>
+
+
+        $(function () {
+            $(".seans").click(function (event) {
+
+                ses_id = $(this).attr('id');
+                window.location = '/Film/Seat/?ids=' + ses_id;
+            });
+        });
+    </script>
+</body>
